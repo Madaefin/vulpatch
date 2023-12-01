@@ -28,7 +28,7 @@ jobs:
         pip install -r requirements.txt
         cd src
 
-    - name: Run AI engine response test
+    - name: Run vulnerability analysis 
       run: |
         cd src
         python main.py
