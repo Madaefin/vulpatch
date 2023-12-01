@@ -1,10 +1,7 @@
 from functions import functions
 
-owner = 'comfyanonymous'
-repo = 'ComfyUI'
-
 #Obtaining the username and repo for the top GitHub project
-project_info_list=functions.get_top_github_projects('10') # Input is the top project range
+project_info_list=functions.get_top_github_projects('5') # Input is the top project range
 
 #Iterating over the project and obtaining the issues data
 for i in range(len(project_info_list)):  

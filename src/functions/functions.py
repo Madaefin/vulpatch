@@ -11,8 +11,8 @@ def download_github_issues(owner, repo):
         
         # Print or process the issues as needed
         for issue in issues:
-            print(issue)
-            #print(f"Issue #{issue['number']}: {issue['title']}")
+            #print(issue)
+            print(f"Issue #{issue['number']}: {issue['title']}")
             
     else:
         print(f"Failed to fetch issues. Status code: {response.status_code}")
