@@ -1,0 +1,60 @@
+﻿text
+"When we go to support / tickets and look for the global kanban, when trying to add a column of kanban filters by states, the filters are not displayed, and therefore, they cannot be added. In Debug, the error is not visible, in the JS Console, it seems that the issue is that the data either doesn't arrive or arrives empty, and that's why the filters are not showing.The error occurs in both a version with data (updated from a previous version) and in a clean installation of version 10.0.10 locally. However, I noticed that the error does not occur in the glpi-network.cloud test network."
+"When creating a ticket through GLPI, the ticket is opened and assigned, the assignment time counts normally, but when opened using the form the ticket is assigned to the group, but the assignment time is not counted."
+"When documents on OFFICE formats (pptx, xlsx...) are submitted directly inside an answers, it gets renamed like : 60b732e5f64b50.71666440REAL TITLE.xlsx
+But if we add it just as a document, and not in the answers, it behave normally.
+Sometimes they can get fully renamed with a similar file that already exists and was uploaded in an older ticket (the file is exactly the same, the technician only change the name of it before uploading)"
+"In the latest versions of GLPI there is now a rule engine for hardware.
+We can therefore make a rule which says: If the user exists then assign the first user group to the computer.
+
+2 problems:
+
+If the user has several groups, GLPI takes the first. But in my opinion it should only take user groups with the is_itemgroup flag, right? because there it affects a group without distinction
+
+The rule engine does not support mass modification?"
+"As described in issue 3993, when a reservation gets too long, the modification page blocks the browser because it has to calculate all the time intervals.
+
+From what I've checked on the 10.0 bugfix and main branches, this issue is not resolved.
+I would argue that using an end date to make/edit reservation is better when dealing with medium to long reservations and that may make sense to make it the default behaviour. For now I just added
+$default_delay = 0;
+to"
+"The Applicant responds to the satisfaction survey and after time passes for the survey to expire, even with the satisfaction survey completed, the GLPI shows that it has expired and it is not possible to view the response applied."
+"Hello,
+Here are the rights assigned to the profile :
+Purge
+See all tickets
+See assigned
+Assign
+Beeing in charge
+Change the priority
+
+When i want to remove assign group from the ticket, i clic on the cross in the left side of the group image, the group disappear, then i clic on the botton 'Save', the group reaparear and no message is displayed."
+"Hi.
+I don't find in any place how to have a notification to inform that the start date of a certain project (or subproject) has arrived.
+It's very annoying having all these information in the planning calendar without receiving any type of email notification about it!
+I found notifications for new project, delete project, update but nothing about a reminder.
+
+Where can I find it?
+
+Thank you very much!"
+"Bug description
+Software Dictionary rules doen't perform all defined actions during import.
+
+Relevant log output
+Nothing posted in Apache or PHP logs that I can see
+
+Steps To reproduce
+Create Software Dictionary rule:
+image
+Run inventory/import from suitable GLPI Agent client
+Check GLPI software asset database to see that the Software name gets changed, but the the category reassignment and publisher change is ignored:"
+"Create a ticket rule:
+Type: on update
+Criteria: state -> Solved AND Category is XXX
+Action: Assign state: Processing (assigned) AND add followup template
+
+Create a ticket with category XXX.
+Solve it by using the dropdown: The ticket gets the followup template and the status changed back to processing.
+Solved it by providing a solution: The ticket is solved without changing the status or the template.
+
+So the rule can be bypassed and is not consistent."

@@ -1,4 +1,5 @@
 import requests
+import csv
 
 def download_github_issues(owner, repo):
     api_url = f'https://api.github.com/repos/{owner}/{repo}/issues'
@@ -56,3 +57,18 @@ def get_top_github_projects(project_number):
         print(f"Failed to fetch projects. Status code: {response.status_code}")
         print(response.text)
     
+
+
+def save_descriptions_to_csv(cve_entries, csv_file_name):
+    with open(csv_file_name, 'w', newline='', encoding='utf-8') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        csvwriter.writerow(['Description'])  # Writing the header
+
+        for entry in cve_entries:
+            if "cve" in entry and "description" in entry["cve"] and "description_data" in entry["cve"]["description"]:
+                descriptions = entry["cve"]["description"]["description_data"]
+                for desc in descriptions:
+                    if desc.get("lang", "") == "en":  # Assuming we're interested in English descriptions
+                        description = desc.get("value", "")
+                        csvwriter.writerow([description])
+

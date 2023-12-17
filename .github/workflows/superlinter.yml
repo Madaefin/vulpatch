@@ -31,4 +31,4 @@ jobs:
     - name: Run vulnerability analysis 
       run: |
         cd src
-        python main.py
+        python test.py
